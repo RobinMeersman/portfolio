@@ -1,4 +1,5 @@
 import type { JSX } from "react";
+import { Link } from "react-router";
 
 export default function Navbar(): JSX.Element {
     return (
@@ -17,10 +18,18 @@ export default function Navbar(): JSX.Element {
             </div>
 
             <ul className="list-none inline-flex space-x-4 col-start-3 justify-end">
-                <li className="px-2">Home</li>
-                <li className="px-2">About</li>
-                <li className="px-2">Projects</li>
-                <li className="px-2">Contract</li>
+                <li className="px-2">
+                    <Link to="/">Home</Link>
+                </li>
+                <li className="px-2">
+                    <Link to="#about">About</Link>
+                </li>
+                <li className="px-2">
+                    <Link to="#projects">Projects</Link>
+                </li>
+                <li className="px-2">
+                    <Link to="#contact">Contact</Link>
+                </li>
                 {/*<li className="px-2">Resume</li>*/}
             </ul>
         </nav>

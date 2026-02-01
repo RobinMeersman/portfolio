@@ -46,11 +46,11 @@
 
 /* Gradient utilities */
 @utility gradient-primary {
-    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-image: linear-gradient(135deg, var(--color-primary-950) 0%, var(--color-primary-800) 100%);
 }
 
 @utility gradient-secondary {
-    background-image: linear-gradient(135deg, #5e60ce 0%, #4ea8de 100%);
+    background-image: linear-gradient(135deg, var(--color-primary-50) 0%, var(--color-blue-500) 100%);
 }
 
 @utility gradient-accent {

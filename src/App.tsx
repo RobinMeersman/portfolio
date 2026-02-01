@@ -11,7 +11,7 @@ import "./index.css";
 
 function Main() {
     return (
-        <div className="bg-primary-50 dark:bg-primary-950 w-screen h-screen overflow-y-auto">
+        <div className="w-screen h-screen overflow-y-auto">
             <Navbar />
             <About />
             <Projects />

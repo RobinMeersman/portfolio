@@ -1,4 +1,13 @@
 import type { JSX } from "react";
+import { skills, type SkillItem } from "../lib/about_skills";
+
+function SkillBox(data: SkillItem): JSX.Element {
+    return (
+        <div className="bg-gray-500 p-2 rounded-md my-1 mr-2">
+            <p>{data.text}</p>
+        </div>
+    );
+}
 
 export default function About(): JSX.Element {
     return (
@@ -24,7 +33,7 @@ export default function About(): JSX.Element {
                     className="
                 col-start-1 h-3/5 max-h-4/5
                 w-2/5 max-w-2/5
-                bg-gray-700 drop-shadow-xl
+                bg-gray-700
                 rounded-md
                 "
                 >
@@ -48,7 +57,7 @@ export default function About(): JSX.Element {
                             informatics. With a deep interest in machine learning and statistics, I
                             enjoy working with data. Furthermore, I am passionate about ray tracing
                             and computer graphics, mobile/desktop development, or working on a
-                            backend web application.
+                            backend web applications.
                         </p>
                         <p className="mt-5 max-w-2/3 wrap-break-word">
                             Outside of software development, you can find me reading books, playing
@@ -57,6 +66,11 @@ export default function About(): JSX.Element {
                     </div>
                     <div className="mt-4">
                         <h3 className="text-xl">Skills</h3>
+                        <div className="flex flex-row flex-wrap max-w-1/2 items-center">
+                            {skills.map((skill: SkillItem) => {
+                                return <SkillBox {...skill} />;
+                            })}
+                        </div>
                     </div>
                 </div>
             </div>

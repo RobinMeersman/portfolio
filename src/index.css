@@ -50,7 +50,8 @@
 }
 
 @utility gradient-secondary {
-    background-image: linear-gradient(135deg, var(--color-primary-50) 0%, var(--color-blue-500) 100%);
+    /*background-image: linear-gradient(135deg, var(--color-primary-950) 0%, var(--color-primary-950) 70%, var(--color-blue-500) 100%);*/
+    background-image: linear-gradient(135deg, hsla(240, 40%, 16%, 1) 40%, hsla(269, 48%, 34%, 1) 100%);
 }
 
 @utility gradient-accent {

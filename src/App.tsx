@@ -14,8 +14,8 @@ function Main() {
         <div className="w-screen h-screen overflow-y-auto">
             <Navbar />
             <About />
-            <Projects />
             <Experience />
+            <Projects />
             <Contact />
             <Footer />
         </div>

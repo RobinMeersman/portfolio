@@ -1,13 +1,6 @@
 import type { JSX } from "react";
 import { skills, type SkillItem } from "../lib/about_skills";
-
-function SkillBox(data: SkillItem): JSX.Element {
-    return (
-        <div className="bg-gray-500 p-2 rounded-md my-1 mr-2">
-            <p>{data.text}</p>
-        </div>
-    );
-}
+import { ItemListing, type Item } from "./components/ItemListing";
 
 export default function About(): JSX.Element {
     return (
@@ -18,7 +11,7 @@ export default function About(): JSX.Element {
             gradient-primary
             "
         >
-            <header className="w-full flex flex-row justify-center p-4">
+            <header className="w-full flex flex-row justify-center pt-4">
                 <h1 className="text-primary-950 dark:text-primary-200 text-3xl">About me</h1>
             </header>
             <div
@@ -52,7 +45,7 @@ export default function About(): JSX.Element {
                         <h3 className="text-2xl">
                             Hi, I am <span className="gradient-text">Robin Meersman</span>
                         </h3>
-                        <p className="mt-10 max-w-2/3 wrap-break-word">
+                        <p className="mt-5 max-w-2/3 wrap-break-word">
                             I am a student @ University of Ghent completing my masters degree in
                             informatics. With a deep interest in machine learning and statistics, I
                             enjoy working with data. Furthermore, I am passionate about ray tracing
@@ -66,11 +59,7 @@ export default function About(): JSX.Element {
                     </div>
                     <div className="mt-4">
                         <h3 className="text-xl">Skills</h3>
-                        <div className="flex flex-row flex-wrap max-w-1/2 items-center">
-                            {skills.map((skill: SkillItem) => {
-                                return <SkillBox {...skill} />;
-                            })}
-                        </div>
+                        <ItemListing {...skills} />
                     </div>
                 </div>
             </div>

@@ -2,21 +2,24 @@ import type { JSX } from "react";
 
 export interface Item {
     text: string;
+    [key: string]: any;
 }
 
-function ItemListingElement(item: Item): JSX.Element {
+function ItemListingElement(props: { item: Item; scale?: number }): JSX.Element {
+    if (!props.scale) props.scale = 1.0;
+
     return (
-        <div className="bg-gray-500 p-2 rounded-md my-1 mr-2">
-            <p>{item.text}</p>
+        <div className="bg-gray-500 p-2 rounded-md my-1 mr-2" style={{ scale: props.scale }}>
+            <p>{props.item.text}</p>
         </div>
     );
 }
 
-export function ItemListing(items: Item[]) {
+export function ItemListing(props: { items: Item[]; scale?: number }) {
     return (
-        <div className="flex flex-row flex-wrap max-w-1/2 items-center">
-            {items.map((item: Item) => {
-                return <ItemListingElement {...item} key={item.text} />;
+        <div className="flex flex-row flex-wrap items-center">
+            {props.items.map((item: Item) => {
+                return <ItemListingElement item={item} scale={props.scale} key={item.text} />;
             })}
         </div>
     );

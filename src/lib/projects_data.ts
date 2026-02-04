@@ -1,3 +1,5 @@
+import writand from "../img/writand-with-background.png";
+
 export interface ProjectElement {
     title: string;
     desc: string;
@@ -11,7 +13,8 @@ export const projects: ProjectElement[] = [
         title: "Writand",
         desc: "Code editor for Android",
         repoUrl: "https://gitlab.com/emrodev/writand",
-        technologies: ["Kotlin", "JetpackCompose", "Android"],
+        technologies: ["Kotlin", "Jetpack Compose", "Android"],
+        thumbnail: writand,
     },
     {
         title: "GPU Ray tracer",

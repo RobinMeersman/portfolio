@@ -1,24 +1,30 @@
 import type { JSX } from "react";
 import { FaGithub } from "react-icons/fa";
 import { projects, type ProjectElement } from "../lib/projects_data";
-import { Fa0 } from "react-icons/fa6";
+import { ItemListing, type Item } from "@/views/components/ItemListing.tsx";
 
-function ProjectItem(project: ProjectElement): JSX.Element {
+function ProjectItem(props: { project: ProjectElement }): JSX.Element {
+    const mappedTechnologies: Item[] = props.project.technologies.map((tech) => {
+        return { text: tech };
+    });
     return (
-        <div className="w-2/3 mx-auto grid grid-cols-[200px_1fr_40px] gap-2">
-            <div className="colstart-1">
-                {project.thumbnail && <img src={project.thumbnail} alt="project thumbnail" />}
+        <div className="w-2/3 h-1/5 mx-auto grid grid-cols-[200px_1fr_40px] gap-2 items-center">
+            <div className="colstart-1 max-w-7/8">
+                {props.project.thumbnail && (
+                    <img src={props.project.thumbnail} alt="props.project thumbnail" />
+                )}
             </div>
             <div className="colstart-2">
-                <h2 className="font-bold text-primary-200">{project.title}</h2>
-                <p>{project.desc}</p>
+                <h2 className="font-bold text-primary-200">{props.project.title}</h2>
+                <p className="text-gray-400">{props.project.desc}</p>
+                <ItemListing items={mappedTechnologies} />
             </div>
             <div className="colstart-3 content-center">
-                <a href={project.repoUrl} target="_blank">
-                    <FaGithub />
+                <a href={props.project.repoUrl} target="_blank">
+                    <FaGithub className="text-primary-200 scale-150" />
                 </a>
             </div>
-            {/*<hr className="col-span-3 w-[95%] mx-auto" />*/}
+            <hr className="col-span-3 w-[95%] mx-auto" />
         </div>
     );
 }
@@ -34,9 +40,9 @@ export default function Projects(): JSX.Element {
             <header className="w-full flex flex-row justify-center pt-4">
                 <h1 className="text-primary-950 dark:text-primary-200 text-3xl">Projects</h1>
             </header>
-            <div className="w-4/5 h-4/5 mx-auto mt-4">
+            <div className="w-4/5 h-4/5 max-h-4/5 overflow-y-auto mx-auto mt-4">
                 {projects.map((project) => {
-                    return <ProjectItem {...project} key={project.repoUrl} />;
+                    return <ProjectItem project={project} key={project.repoUrl} />;
                 })}
             </div>
         </section>

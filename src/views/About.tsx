@@ -1,6 +1,6 @@
 import type { JSX } from "react";
-import { skills, type SkillItem } from "../lib/about_skills";
-import { ItemListing, type Item } from "./components/ItemListing";
+import { skills } from "../lib/about_skills";
+import { ItemListing } from "./components/ItemListing";
 
 export default function About(): JSX.Element {
     return (
@@ -59,7 +59,7 @@ export default function About(): JSX.Element {
                     </div>
                     <div className="mt-4">
                         <h3 className="text-xl">Skills</h3>
-                        <ItemListing {...skills} />
+                        <ItemListing items={skills} />
                     </div>
                 </div>
             </div>

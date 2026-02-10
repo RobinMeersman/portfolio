@@ -7,10 +7,11 @@ export default function About(): JSX.Element {
         <section
             id="about"
             className="
-            w-full h-[90vh]
+            w-full h-screen
             gradient-primary
             "
         >
+            <div className="h-[10vh]"></div>
             <header className="w-full flex flex-row justify-center pt-4">
                 <h1 className="text-primary-950 dark:text-primary-200 text-3xl">About me</h1>
             </header>

@@ -6,10 +6,10 @@ export interface Item {
 }
 
 function ItemListingElement(props: { item: Item; scale?: number }): JSX.Element {
-    if (!props.scale) props.scale = 1.0;
+    const scale = props.scale ?? 1.0;
 
     return (
-        <div className="bg-gray-500 p-2 rounded-md my-1 mr-2" style={{ scale: props.scale }}>
+        <div className="bg-gray-500 p-2 rounded-md my-1 mr-2" style={{ scale: scale }}>
             <p>{props.item.text}</p>
         </div>
     );

@@ -1,5 +1,5 @@
 import type { JSX } from "react";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaGitlab } from "react-icons/fa";
 import { projects, type ProjectElement } from "../lib/projects_data";
 import { ItemListing, type Item } from "@/views/components/ItemListing.tsx";
 
@@ -21,7 +21,11 @@ function ProjectItem(props: { project: ProjectElement }): JSX.Element {
             </div>
             <div className="colstart-3 content-center">
                 <a href={props.project.repoUrl} target="_blank">
-                    <FaGithub className="text-primary-200 scale-150" />
+                    {props.project.repoUrl.includes("github") ? (
+                        <FaGithub className="text-primary-200 scale-150" />
+                    ) : (
+                        <FaGitlab className="text-primary-200 scale-150" />
+                    )}
                 </a>
             </div>
             <hr className="col-span-3 w-[95%] mx-auto" />
@@ -32,11 +36,12 @@ function ProjectItem(props: { project: ProjectElement }): JSX.Element {
 export default function Projects(): JSX.Element {
     return (
         <section
-            id="about"
+            id="projects"
             className="
-            w-full h-[90vh] gradient-primary
+            w-full h-screen gradient-primary
             "
         >
+            <div className="h-[10vh]"></div>
             <header className="w-full flex flex-row justify-center pt-4">
                 <h1 className="text-primary-950 dark:text-primary-200 text-3xl">Projects</h1>
             </header>

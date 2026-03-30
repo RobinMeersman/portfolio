@@ -19,8 +19,8 @@ export const projects: ProjectElement[] = [
     {
         title: "GPU Ray tracer",
         desc: "GPU accelerated ray tracer",
-        repoUrl: "https://gitlab.com/RobinMeersman/gpu-raytracing",
-        technologies: ["OpenGL", "C++", "GLSL"],
+        repoUrl: "https://gitlab.com/RobinMeersman/raytracer-metal",
+        technologies: ["Apple Metal", "C++", "AppKit", "MetalKit", "Metal Performance Shaders"],
     },
     {
         title: "AI/ML mini projects",

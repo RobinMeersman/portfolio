@@ -10,5 +10,7 @@ export const skills: SkillItem[] = [
     { text: "Typescript + React" },
     { text: "Linux" },
     { text: "python" },
+    { text: "PyTorch" },
+    { text: "Jax" },
     { text: "bash" },
 ];

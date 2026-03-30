@@ -1,6 +1,7 @@
 import type { JSX } from "react";
 import { skills } from "../lib/about_skills";
 import { ItemListing } from "./components/ItemListing";
+import me from "../img/me.png";
 
 export default function About(): JSX.Element {
     return (
@@ -25,13 +26,17 @@ export default function About(): JSX.Element {
                 {/* Image col */}
                 <div
                     className="
-                col-start-1 h-3/5 max-h-4/5
-                w-2/5 max-w-2/5
-                bg-gray-700
-                rounded-md
+                col-start-1 h-3/5 max-h-3/5
+                w-3/5 max-w-3/5
+                rounded-full
+                overflow-hidden
                 "
                 >
-                    <img src={undefined} alt="image of me" />
+                    <img 
+                        src={me} 
+                        alt="image of me" 
+                        className="w-full h-full object-cover"
+                    />
                 </div>
 
                 {/* Text col */}
@@ -50,12 +55,13 @@ export default function About(): JSX.Element {
                             I am a student @ University of Ghent completing my masters degree in
                             informatics. With a deep interest in machine learning and statistics, I
                             enjoy working with data. Furthermore, I am passionate about ray tracing
-                            and computer graphics, mobile/desktop development, or working on a
+                            and computer graphics, mobile/desktop development, bio-informatics, and working on
                             backend web applications.
                         </p>
                         <p className="mt-5 max-w-2/3 wrap-break-word">
                             Outside of software development, you can find me reading books, playing
-                            a game with my friends, or being active in a gym/swimming pool.
+                            a game with my friends, or being active in a swimming pool. I am also a coach
+                            at my local gymnastics club.
                         </p>
                     </div>
                     <div className="mt-4">

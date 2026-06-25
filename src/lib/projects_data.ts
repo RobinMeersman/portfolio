@@ -29,9 +29,9 @@ export const projects: ProjectElement[] = [
         technologies: ["Python", "tensorflow", "pytorch"],
     },
     {
-        title: "Calendar app",
-        desc: "Small desktop app focussing on task scheduling and planning",
-        repoUrl: "https://gitlab.com/RobinMeersman/calendar-app",
-        technologies: ["Kotlin", "JetpackCompose desktop", "MVVM", "SQLite"],
+        title: "UChess",
+        desc: "Game combining chess and Uno",
+        repoUrl: "https://gitlab.com/RobinMeersman/uchess",
+        technologies: ["Rust", "Iced-rs UI"],
     },
 ];

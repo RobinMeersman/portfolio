@@ -8,18 +8,18 @@ function ProjectItem(props: { project: ProjectElement }): JSX.Element {
         return { text: tech };
     });
     return (
-        <div className="w-2/3 h-1/5 mx-auto grid grid-cols-[200px_1fr_40px] gap-2 items-center">
-            <div className="colstart-1 max-w-7/8">
+        <div className="w-2/3 h-1/5 mx-auto grid grid-cols-[1fr_40px] gap-2 items-center">
+            {/* <div className="colstart-1 max-w-7/8">
                 {props.project.thumbnail && (
                     <img src={props.project.thumbnail} alt="props.project thumbnail" />
                 )}
-            </div>
-            <div className="colstart-2">
+            </div> */}
+            <div className="colstart-1">
                 <h2 className="font-bold text-primary-200">{props.project.title}</h2>
                 <p className="text-gray-400">{props.project.desc}</p>
                 <ItemListing items={mappedTechnologies} />
             </div>
-            <div className="colstart-3 content-center">
+            <div className="colstart-2 content-center">
                 <a href={props.project.repoUrl} target="_blank">
                     {props.project.repoUrl.includes("github") ? (
                         <FaGithub className="text-primary-200 scale-150" />

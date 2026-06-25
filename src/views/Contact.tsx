@@ -8,11 +8,11 @@ export default function Contact(): JSX.Element {
         <section id="contact" className="w-full h-[90vh] bg-primary-950">
             <div className="h-[10vh]"></div>
             <header className="w-full flex flex-row justify-center py-4">
-                <h1 className="text-primary-950 dark:text-primary-200 text-3xl">Contact</h1>
+                <h1 className="text-primary-200 text-3xl">Contact</h1>
             </header>
             <div className="flex flex-row w-full h-4/5 mx-auto items-center justify-evenly">
                 <div className="w-2/5 h-2/5 bg-gray-700 grid grid-rows-2" id="contact-info">
-                    <h2 className="text-2xl text-center dark:text-primary-200 text-primary-950 p-4 h-4 row-start-1">Contact information</h2>
+                    <h2 className="text-2xl text-center text-primary-200 p-4 h-4 row-start-1">Contact information</h2>
                     <div className="flex flex-col h-full items-start justify-start row-start-2">
                         <div className="flex flex-row justify-left items-center px-4">
                             <BiEnvelopeOpen className="mx-1" />
@@ -31,7 +31,7 @@ export default function Contact(): JSX.Element {
                     </div>
                 </div>
                 <div id="follow" className="w-2/5 h-2/5 bg-gray-700 grid grid-rows-2">
-                    <h2 className="text-2xl text-center dark:text-primary-200 text-primary-950 p-4 h-4 row-start-1">Follow me</h2>
+                    <h2 className="text-2xl text-center text-primary-200 p-4 h-4 row-start-1">Follow me</h2>
                     <div className="flex flex-row w-full h-full items-start justify-center row-start-2">
                         <a href="https://www.linkedin.com/in/robin-meersman-bb79772b7/" target="_blank" className="mx-2"><FaLinkedinIn className="text-2xl" /></a>
                         <a href="https://github.com/RobinMeersman" target="_blank" className="mx-2"><FaGithub className="text-2xl" /></a>

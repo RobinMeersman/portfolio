@@ -14,7 +14,7 @@ export default function About(): JSX.Element {
         >
             <div className="h-[10vh]"></div>
             <header className="w-full flex flex-row justify-center pt-4">
-                <h1 className="text-primary-950 dark:text-primary-200 text-3xl">About me</h1>
+                <h1 className="text-primary-200 text-3xl">About me</h1>
             </header>
             <div
                 className="
@@ -32,9 +32,9 @@ export default function About(): JSX.Element {
                 overflow-hidden
                 "
                 >
-                    <img 
-                        src={me} 
-                        alt="image of me" 
+                    <img
+                        src={me}
+                        alt="image of me"
                         className="w-full h-full object-cover"
                     />
                 </div>
@@ -44,7 +44,7 @@ export default function About(): JSX.Element {
                     className="
                 col-start-2 h-3/5 max-h-4/5
                 w-4/5 max-w-4/5
-                p-2 text-primary-950 dark:text-primary-200
+                p-2 text-primary-200
                 "
                 >
                     <div>

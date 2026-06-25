@@ -6,9 +6,9 @@ export default function Navbar(): JSX.Element {
             className="
             w-full h-[10vh] grid grid-cols-3
             items-center px-4
-            bg-primary-50 dark:bg-primary-950
-            text-primary-800 dark:text-primary-200
-            border-b-2 border-solid border-b-border-light dark:border-b-border-dark
+            bg-primary-950
+            text-primary-200
+            border-b-2 border-solid border-b-border-dark
             absolute top-0 z-50
         "
         >

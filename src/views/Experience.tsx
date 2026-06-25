@@ -40,7 +40,7 @@ export default function Experience(): JSX.Element {
         >
             <div className="h-[10vh]"></div>
             <header className="w-full flex flex-row justify-center pt-4">
-                <h1 className="text-primary-950 dark:text-primary-200 text-3xl">Experience</h1>
+                <h1 className="text-primary-200 text-3xl">Experience</h1>
             </header>
             <ExperienceTimeline experiences={experiences} />
         </section>
